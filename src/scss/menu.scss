@@ -1,0 +1,143 @@
+@import 'normalize.css';
+@import 'variables.scss';
+
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 60px;
+    height: max-content;
+    border-radius: 8px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.65);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.menu_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 60px;
+    height: 100%;
+}
+
+
+.rect {
+    width: 30px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+
+.circle {
+    width: 30px;
+    height: 32px;
+    border-radius: 15px;
+}
+
+
+
+#shape {
+    display: flex;
+    transition: 0.3s ease all;
+}
+
+.icon_shape {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    &:hover {
+        padding-left: 6px;
+        justify-content: left;
+        gap: 15px;
+        background-color: #dedeffcc;
+        
+        width: 170px;
+    }
+}
+
+.primary_shape{
+    display: none;
+}
+
+.primary_shape_visible {
+    display: flex;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    transition: 0.1s ease all;
+    
+    &:hover {
+        background-color: #dedeff;
+    }
+}
+
+.icon_font {
+
+    display: flex;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: 0.1s ease all;
+}
+
+.px {
+    display: flex;
+    justify-content: center;
+    border-radius: 8px;
+    border-radius: 8px;
+}
+
+
+.tooltip {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto';
+    font-weight: 100;
+    color: #ffffff;
+    height: 44px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(40, 40, 40, 0.65);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+}
+
+.tooltip_right {
+    display: flex;
+}
+
+
+.tooltip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    /* Позиция стрелки */
+    right: 100%;
+    /* Центрирование стрелки */
+    margin-top: -5px;
+    /* Смещение стрелки для центрирования */
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgba(40, 40, 40, 0.65) transparent transparent;
+    /* Создание стрелки */
+}

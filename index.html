@@ -1,15 +1,183 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS Vite Template</title>
-  </head>
-  <body>
-    <div id="app">
-      
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>my note</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/nano.min.css" />
+</head>
+
+
+
+<body>
+  <!-- левое меню -->
+  <div id="menu" class="menu">
+    <div id="cursor" class="icon">
+      <svg  class="primary" viewBox="0 0 24 24" width="28" height="28" fill="#3d4752"
+        xmlns="http://www.w3.org/2000/svg">
+        <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+          d="M5 4.117c0-.864 1.022-1.322 1.666-.746l12.19 10.883c.684.612.252 1.746-.667 1.746h-6.982l-4.5 4.5c-.63.63-1.707.184-1.707-.707V4.117zM18.19 15L6 4.117v15.676l4.5-4.5a1 1 0 01.707-.293h6.982z">
+        </path>
+      </svg>
     </div>
-    <script type="module" src="./src/js/main.js"></script>
-  </body>
+
+    <div id="text" class="icon">
+      <svg  class="primary" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"
+        viewBox="0 0 28 28">
+        <path class="primary" fill="#3d4752" class="primary" fill-rule="evenodd"
+          d="M5.375 3.375h17.25V8h-1.25V4.625h-6.75v17.75H18v1.25h-8v-1.25h3.375V4.625h-6.75V8h-1.25V3.375Z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </div>
+
+    <div id="draw" class="icon">
+      <svg  class="primary" viewBox="0 0 24 24" width="24" height="24" fill="#3d4752"
+        xmlns="http://www.w3.org/2000/svg">
+        <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+          d="M13.33 4.89a95.993 95.993 0 00-9.51 4.3.561.561 0 11-.51-1 97.026 97.026 0 019.64-4.36c.73-.27 1.4-.48 1.98-.63a4.95 4.95 0 011.5-.2c.2.02.45.08.65.22.24.17.36.43.37.7 0 .26-.08.5-.19.7-.1.23-.27.46-.47.72a27.208 27.208 0 01-3.69 3.64l-1.7 1.42c-.74.61-1.42 1.17-2 1.68-.49.44-.86.81-1.1 1.12-.1.11-.15.2-.19.28l.26.04c.4.05 1.07.02 2.06-.1l.75-.1c1.68-.23 3.13-.42 4.32-.54 1.35-.14 2.43-.2 3.15-.1.34.06.73.17.98.45.31.34.3.77.16 1.12a3.503 3.503 0 01-.69 1.02c-.33.36-.76.77-1.3 1.24A6.478 6.478 0 0016 18.6c-.1.24-.12.4-.1.52 0 .11.05.2.13.28.16.19.52.36 1.08.44.54.07 1.17.04 1.79-.08a.561.561 0 01.22 1.1c-.72.14-1.48.18-2.16.09a2.88 2.88 0 01-1.77-.79 1.6 1.6 0 01-.41-.91c-.04-.35.03-.72.19-1.09a7.5 7.5 0 012.07-2.5c.52-.46.92-.84 1.2-1.15.28-.3.42-.52.48-.65a1.41 1.41 0 00-.27-.06c-.55-.09-1.5-.05-2.86.1-1.17.12-2.6.3-4.28.53l-.76.1c-1 .13-1.78.17-2.33.11a2.118 2.118 0 01-.75-.2.99.99 0 01-.51-.6c-.08-.28-.02-.54.07-.74.08-.2.22-.4.37-.6.3-.38.74-.81 1.24-1.26.58-.52 1.3-1.1 2.05-1.73l1.67-1.39a26.166 26.166 0 003.54-3.48c.17-.22.28-.39.35-.52-.23 0-.58.05-1.05.17-.53.13-1.17.34-1.88.6h.01z">
+        </path>
+      </svg>
+    </div>
+
+    <div id="arrow" class="icon">
+      <svg  class="primary" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none"
+        viewBox="0 0 28 28">
+        <path class="primary" fill="#3d4752" class="primary"
+          d="m21.071 11.172 2.121-6.364-6.364 2.12 1.768 1.769-13.45 13.45a.5.5 0 1 0 .708.707l13.45-13.45 1.767 1.768Z">
+        </path>
+      </svg>
+    </div>
+
+    <div id="shape" class="icon_shape">
+      <svg id="rect" class="primary" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="transparent"
+        viewBox="0 0 28 28">
+        <path class="primary" fill="transparent" d="M2 2h24v24H2V2Z"></path>
+        <path class="primary" fill="#3d4752" class="primary" fill-rule="evenodd" d="M25 3H3v22h22V3ZM2 2v24h24V2H2Z"
+          clip-rule="evenodd">
+        </path>
+      </svg>
+      <svg id="circle"  class="primary_shape" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+        <path class="primary_shape" d="M26 14c0 6.627-5.373 12-12 12S2 20.627 2 14 7.373 2 14 2s12 5.373 12 12z" stroke="#3d4752"
+          stroke-width="1.05" fill="transparent"></path>
+      </svg>
+      <svg id="treangle" class="primary_shape" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+        <path d="M2 23h24L14 5z" stroke="#3d4752" stroke-width="1.05" fill="transparent"></path>
+      </svg>
+      <svg id="rhombus" class="primary_shape" xmlns="http://www.w3.org/2000/svg" width="28" height="28">
+        <path class="primary_shape" d="M14 2l12 12-12 12L2 14z" stroke="#3d4752" stroke-width="1.05" fill="transparent"></path>
+      </svg>
+    </div>
+
+    <div id="step_back" class="icon">
+      <svg  class="primary" viewBox="0 0 24 24" width="24" height="24" fill="#3d4752"
+        xmlns="http://www.w3.org/2000/svg">
+        <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+          d="M8.854 5.146a.5.5 0 010 .708L4.707 10H13.5c3.1 0 5.035.91 6.16 2.527C20.755 14.101 21 16.239 21 18.5a.5.5 0 01-1 0c0-2.24-.255-4.1-1.16-5.402C17.965 11.84 16.4 11 13.5 11H4.707l4.147 4.146a.5.5 0 01-.708.708l-5-5a.5.5 0 010-.708l5-5a.5.5 0 01.708 0z">
+        </path>
+      </svg>
+    </div>
+
+    <div id="step_forward" class="icon">
+      <svg class="primary" viewBox="0 0 24 24" width="24" height="24" fill="#3d4752" xmlns="http://www.w3.org/2000/svg">
+        <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+          d="M15.146 5.146a.5.5 0 000 .708L19.293 10H10.5c-3.1 0-5.035.91-6.16 2.527C3.245 14.101 3 16.239 3 18.5a.5.5 0 001 0c0-2.24.255-4.1 1.16-5.402C6.035 11.84 7.6 11 10.5 11h8.793l-4.147 4.146a.5.5 0 00.708.708l5-5a.5.5 0 000-.708l-5-5a.5.5 0 00-.708 0z">
+        </path>
+      </svg>
+    </div>
+
+    <div id="delete_icon" class="icon">
+      <svg class="primary" width="24" height="24" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="primary" fill-rule="evenodd" clip-rule="evenodd"
+          d="M6.49514 1.99999 9.50707 2c.21477 0 .51033.10684.51033.32162V3l-4.02226-.00001v-.67838c0-.21478.28522-.32162.5-.32162Zm-1.5 1v-.67838C4.99514 1.67727 5.41668 1 6.06101 1l3.83005.00001c.64434 0 1.12254.67727 1.12254 1.32161V3l1.1158-.00001h1.4816c.2148 0 .389.28523.389.50001 0 .21478-.1742.5-.389.5h-.6159v9.8333c0 .8591-.636 1.1667-1.4951 1.1667h-7c-.85911 0-1.50486-.2627-1.50486-1.1218L3 4h-.60565C2.17957 4 2 3.71478 2 3.5c0-.21478.17957-.50001.39435-.50001h2.60079ZM10.4466 4H4v9c0 1 0 1 1 1h6c1 0 1 0 1-1V4h-1.5534ZM6.5049 5.62334c.21478 0 .49024.16188.49024.37666v5.9337c0 .2148-.28522.3889-.5.3889-.21478 0-.5-.1741-.5-.3889V6c0-.21478.29499-.37666.50976-.37666ZM10.0017 6c0-.21478-.27052-.37666-.4853-.37666-.21478 0-.51094.16188-.51094.37666v5.9337c0 .2148.29272.3889.50749.3889.21478 0 .48875-.1741.48875-.3889V6Z"
+          fill="#3d4752"></path>
+      </svg>
+    </div>
+  </div>
+  <!--  -->
+  <div id="app">
+
+    <!-- контекстное меню -->
+    <div id="context_menu" class="context_menu">
+      <div id="copy" class="context_menu_btn">copy</div>
+      <div id="paste" class="context_menu_btn">paste</div>
+      <div id="group" class="context_menu_btn">group</div>
+      <div id="ungroup" class="context_menu_btn">ungroup</div>
+      <div id="save" class="context_menu_btn">save <span>SVG</span></div>
+      <div id="delete" class="context_menu_btn">delete</div>
+    </div>
+
+
+    <canvas id="canvas" class="canvas"></canvas>
+
+    <div id="right_menu" class="right_menu">
+
+      <div class="zoom">
+        <div class="zoom_context">Zoom : </div>
+        <div id="zoom_value" class="zoom_value">1</div>
+      </div>
+      <div id="properties_active_object" class="properties_active_object">
+        <div class="position">
+
+          <div class="x">
+            <div id="context_x" class="active_object_context">X : </div>
+            <div id="position_x_value" class="position_x_value"></div>
+          </div>
+
+          <div class="y">
+            <div id="context_y" class="active_object_context">Y : </div>
+            <div id="position_y_value" class="position_y_value"></div>
+          </div>
+
+        </div>
+        
+        <div class="fill">
+          <div class="active_object_context">fill</div>
+          <div id="fill_value"></div>
+          <toolcool-color-picker id="fill_picker" color="#ffffff" button-width="lg" button-height="lg"
+            button-padding="2px" popup-position="right"></toolcool-color-picker>
+        </div>
+        <div class="stroke">
+          <div class="active_object_context">stroke</div>
+          <div class="stroke_width_wrapper">
+            <div id="minus_stroke_width">-</div>
+            <input id="stroke_width" type="number" value="0" min="0" min="0" max="100" aria-label="stroke-width"
+              maxlength="3"></input>
+            <div id="plus_stroke_width">+</div>
+          </div>
+          <toolcool-color-picker id="stroke_picker" button-width="lg" button-height="lg" button-padding="2px"
+            color="#000000" popup-position="right">
+          </toolcool-color-picker>
+        </div>
+        <div id="canvas_option" class="canvas_option">
+          <div id="clear_canvas" class="clear_canvas">clear</div>
+          <div id="save_canvas" class="save_canvas">save</div>
+          <div id="target_param"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div id="text_menu" class="text_menu">
+    <!-- -->
+    <div class="font_size">
+      <div id="font_size_minus" class="icon_font">-</div>
+
+      <div class="font">
+        <div id='font_size_value'>10</div>
+        <div class="px">px</div>
+      </div>
+
+      <div id="font_size_plus" class="icon_font">+</div>
+    </div>
+    <!-- -->
+    <toolcool-color-picker id="text_color_picker" button-width="lg" button-height="lg" button-padding="2px"
+      color="#000000" popup-position="right">
+    </toolcool-color-picker>
+  </div>
+  </div>
+  <script defer type="module" src="./src/js/main.js"></script>
+  <script type="text/javascript" src="/src/js/toolcool-color-picker.min.js"></script>
+</body>
+
 </html>

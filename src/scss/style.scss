@@ -1,11 +1,101 @@
 @import 'normalize.css';
 @import 'variables.scss';
 
-#app {
+
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100vh;
+    flex-direction: column;
+    background-color: #f2f3f5;
 }
 
+
+#app {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.context_menu {
+    position: fixed;
+    display: none;
+    width: 200px;
+    height: max-content;
+    z-index: 1000;
+    border-radius: 8px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    outline: 0
+}
+
+.context_menu.visible {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    color: #000000b7;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.context_menu_btn {
+    font-family: 'NeueMachina-Extralight';
+    font-size: 16px;
+    cursor: pointer;
+    padding: 6px 10px;
+    border: 4px solid transparent;
+    z-index: 1000;
+    box-sizing: border-box;
+    .primary_shape {
+        opacity: 0;
+    }
+    &:hover {
+        background-color: #dedeff;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+#minus_stroke_width,
+#plus_stroke_width {
+    cursor: pointer;
+}
+
+
+/* Стилизация полосы прокрутки */
+::-webkit-scrollbar {
+    width: 10px;
+    /* ширина всей полосы прокрутки */
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);
+    /* цвет области прокрутки */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #dedeff;
+    /* цвет ползунка прокрутки */
+    border-radius: 20px;
+    /* закругление ползунка прокрутки */
+    border: none;
+    /* создает отступ вокруг ползунка прокрутки */
+}

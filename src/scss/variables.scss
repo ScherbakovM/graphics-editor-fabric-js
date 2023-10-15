@@ -1,0 +1,106 @@
+$hover-color: rgb(122, 127, 255);
+$box-shadow-form: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+
+@font-face {
+    font-family: 'GraphikLCWeb-Medium';
+    src: url('/src/fonts/GraphikLCWeb/graphiklcwebmedium.ttf');
+    src: url('/src/fonts/GraphikLCWeb/graphiklcwebmedium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JosefinSlab-Ultralight';
+    src: url('/src/fonts/Josefin_Slab/static/JosefinSlab-ExtraLight.ttf');
+    src: url('/src/fonts/Josefin_Slab/static/JosefinSlab-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JosefinSlab-Ultralight';
+    src: url('/src/fonts/Josefin_Slab/static/JosefinSlab-Light.ttf');
+    src: url('/src/fonts/Josefin_Slab/static/JosefinSlab-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'JosefinSlab-Regular';
+    src: url('/src/fonts/Josefin_Slab/static/JosefinSlab-Regular.ttf');
+    src: url('/src/fonts/Josefin_Slab/static/JosefinSlab-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-Ultralight';
+    src: url('/src/fonts/NeueMachina/NeueMachina-Ultralight.eot');
+    src: url('/src/fontsNeueMachina/NeueMachina-Ultralight.eot?#iefix') format('embedded-opentype'),
+        url('/src/fonts/NeueMachina/NeueMachina-Ultralight.woff2') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Ultralight.woff') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Ultralight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-Light';
+    src: url('/src/fonts/NeueMachina/NeueMachina-Light.eot');
+    src:
+        url('/src/fonts/NeueMachina/NeueMachina-Light.eot?#iefix') format('embedded-opentype'),
+        url('/src/fonts/NeueMachina/NeueMachina-Light.woff2') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Light.woff') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'NeueMachina-Regular';
+    src: url('/src/fonts/NeueMachina/NeueMachina-Regular.eot');
+    src:
+        url('/src/fonts/NeueMachina/NeueMachina-Regular.eot?#iefix') format('embedded-opentype'),
+        url('/src/fonts/NeueMachina/NeueMachina-Regular.woff2') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Regular.woff') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-Bold';
+    src: url('NeueMachina-Bold.eot');
+    src:
+        url('/src/fonts/NeueMachina/NeueMachina/NeueMachina-Bold.eot?#iefix') format('embedded-opentype'),
+        url('/src/fonts/NeueMachina/NeueMachina-Bold.woff2') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Bold.woff') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-Medium';
+    src: url('NeueMachina-Medium.eot');
+    src:
+        url('/src/fonts/NeueMachina/NeueMachina-Medium.eot?#iefix') format('embedded-opentype'),
+        url('/src/fonts/NeueMachina/NeueMachina-Medium.woff2') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Medium.woff') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NeueMachina-Ultrabold';
+    src: url('NeueMachina-Ultrabold.eot');
+    src:
+        url('/src/fonts/NeueMachina/NeueMachina-Ultrabold.eot?#iefix') format('embedded-opentype'),
+        url('/src/fonts/NeueMachina/NeueMachina-Ultrabold.woff2') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Ultrabold.woff') format('woff'),
+        url('/src/fonts/NeueMachina/NeueMachina-Ultrabold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
