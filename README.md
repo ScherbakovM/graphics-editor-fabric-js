@@ -1,5 +1,6 @@
 # graphics-editor-fabric-js
 
+https://clipchamp.com/watch/5MTv1c7w9iC
 
 **Структура проекта**
 
