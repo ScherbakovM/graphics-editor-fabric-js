@@ -1,6 +1,7 @@
 # graphics-editor-fabric-js
 
-https://clipchamp.com/watch/5MTv1c7w9iC
+![fabric](https://github.com/ScherbakovM/graphics-editor-fabric-js/assets/109952823/e92f9555-8de2-46ee-a434-8d94b1e8f1b8)
+
 
 **Структура проекта**
 
